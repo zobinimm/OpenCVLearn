@@ -46,6 +46,56 @@ int main() {
 
 #pragma endregion
 
+#pragma region Test Face
+//#include <opencv2/opencv.hpp>
+//
+//int main() {
+//    // 创建人脸检测器
+//    cv::CascadeClassifier faceCascade;
+//    if (!faceCascade.load("haarcascade_frontalface_default.xml")) {
+//        std::cerr << "Error: Unable to load the face cascade classifier." << std::endl;
+//        return -1;
+//    }
+//
+//    // 遍历多个图片文件
+//    for (int i = 1; i <= 99; ++i) {
+//        // 生成文件名
+//        std::string filename = "your_image_path_" + (i < 10 ? "0" : "") + std::to_string(i) + ".jpg";
+//
+//        // 读取图像
+//        cv::Mat img = cv::imread(filename);
+//
+//        if (img.empty()) {
+//            std::cerr << "Error: Unable to read the image " << filename << std::endl;
+//            continue;  // 继续处理下一张图像
+//        }
+//
+//        // 转换为灰度图
+//        cv::Mat gray;
+//        cv::cvtColor(img, gray, cv::COLOR_BGR2GRAY);
+//
+//        // 检测人脸
+//        std::vector<cv::Rect> faces;
+//        faceCascade.detectMultiScale(gray, faces, 1.3, 5);
+//
+//        // 在图像上标识人脸
+//        for (const cv::Rect& face : faces) {
+//            cv::rectangle(img, face, cv::Scalar(0, 255, 0), 2); // 用绿色矩形框标识人脸
+//        }
+//
+//        // 显示结果（可选）
+//        cv::imshow("Result", img);
+//        cv::waitKey(0);
+//
+//        // 保存结果（可选）
+//        cv::imwrite("result_" + filename, img);
+//    }
+//
+//    return 0;
+//}
+
+#pragma endregion
+
 
 #pragma region Test2
 //#include <opencv2/opencv.hpp>
