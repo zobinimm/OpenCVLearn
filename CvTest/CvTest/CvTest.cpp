@@ -1,4 +1,5 @@
-﻿#include <opencv2/opencv.hpp>
+﻿#pragma region Test1
+#include <opencv2/opencv.hpp>
 #include <iostream>
 
 int main() {
@@ -43,6 +44,66 @@ int main() {
     return 0;
 }
 
+#pragma endregion
+
+
+#pragma region Test2
+//#include <opencv2/opencv.hpp>
+//
+//int main() {
+//    // 读取原始图像
+//    cv::Mat img = cv::imread("your_image_path.jpg");
+//
+//    if (img.empty()) {
+//        std::cerr << "Error: Unable to read the image." << std::endl;
+//        return -1;
+//    }
+//    cv::Mat imgShow = cv::imread("your_image_path.jpg");
+//
+//    // 读取模板图像
+//    cv::Mat templateImg = cv::imread("your_template_image.jpg");
+//
+//    if (templateImg.empty()) {
+//        std::cerr << "Error: Unable to read the template image." << std::endl;
+//        return -1;
+//    }
+//
+//    // 转换颜色空间
+//    cv::cvtColor(img, img, cv::COLOR_BGR2HSV);
+//    cv::cvtColor(templateImg, templateImg, cv::COLOR_BGR2HSV);
+//
+//    // 通道分离
+//    std::vector<cv::Mat> imgChannels, templateChannels;
+//    cv::split(img, imgChannels);
+//    cv::split(templateImg, templateChannels);
+//
+//    // 使用模板匹配
+//    cv::Mat result;
+//    cv::matchTemplate(imgChannels[2], templateChannels[2], result, cv::TM_CCOEFF_NORMED);
+//
+//    // 设置阈值，可以根据实际情况调整
+//    double threshold = 0.8;
+//    cv::threshold(result, result, threshold, 1.0, cv::THRESH_BINARY);
+//
+//    // 寻找匹配位置
+//    std::vector<cv::Point> locations;
+//    cv::findNonZero(result, locations);
+//
+//    // 在原图上标识匹配位置
+//    for (const cv::Point& loc : locations) {
+//        cv::Rect rect(loc.x, loc.y, templateImg.cols, templateImg.rows);
+//        cv::rectangle(imgShow, rect, cv::Scalar(0, 255, 0), 2); // 用绿色矩形框标识
+//    }
+//
+//    // 显示结果
+//    cv::imshow("Result", imgShow);
+//    cv::waitKey(0);
+//
+//    return 0;
+//}
+#pragma endregion
+
+#pragma region Test3
 //#include <opencv2/opencv.hpp>
 //#include <opencv2/highgui/highgui.hpp>
 //#include <opencv2/imgproc/imgproc.hpp>
@@ -123,4 +184,4 @@ int main() {
 //
 //    return 0;
 //}
-
+#pragma endregion
